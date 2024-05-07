@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="79dp"
+        android:text="Student Database"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter your first name..."
+            android:inputType="text"
+            android:id="@+id/firstnameEt"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textL2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/textL1"
+        app:layout_constraintStart_toStartOf="@+id/textL1"
+        app:layout_constraintTop_toBottomOf="@+id/textL1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter your last name..."
+            android:inputType="text"
+            android:id="@+id/lastnameEt"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/textL2"
+        app:layout_constraintStart_toStartOf="@+id/textL2"
+        app:layout_constraintTop_toBottomOf="@+id/textL2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rollnoEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter your Roll No..."
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/white"
+        android:text="Save"
+        android:textColor="@color/black"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/saveBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveBtn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchRollnoEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter your Roll No..."
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Search"
+        android:textColor="@color/black"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout1"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout1"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/deleteAllBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Delete All"
+        android:textColor="@color/black"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/searchBtn"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
+        app:layout_constraintVertical_bias="0.471"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/showBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Show Data"
+        android:textColor="@color/black"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/deleteAllBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toEndOf="@+id/deleteAllBtn"
+        app:layout_constraintTop_toTopOf="@+id/deleteAllBtn"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
